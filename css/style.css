@@ -1,0 +1,362 @@
+
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352c;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+/* NAVBAR */
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #174c38;
+    text-decoration: none;
+}
+
+.logo h3 {
+    font-size: 15px;
+}
+
+.logo small {
+    color: #777;
+}
+
+.logo-icon {
+    background: #174c38;
+    color: white;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #1d8054;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(rgba(10,45,30,0.75),
+        rgba(10,45,30,0.75)),
+        url("../assets/banner.jpg") center/cover;
+}
+
+.hero-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.tagline {
+    color: #a8e5bb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #9ce5b2;
+}
+
+.hero p {
+    max-width: 570px;
+    margin-bottom: 30px;
+    color: #e5eee8;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #238451;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #17683e;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 0;
+}
+
+.light-bg {
+    background: #f3f7f4;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #238451;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin: 8px 0;
+    color: #174c38;
+}
+
+.section-title p {
+    color: #777;
+}
+
+/* PROFIL */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile-grid h3 {
+    color: #174c38;
+    margin-bottom: 15px;
+}
+
+.profile-grid p {
+    margin-bottom: 12px;
+}
+
+.note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ORGANISASI */
+.org-card {
+    background: white;
+    padding: 30px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.org-icon {
+    font-size: 45px;
+}
+
+.org-card h3 {
+    color: #174c38;
+}
+
+/* STATISTIK */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #eaf4ed;
+    padding: 35px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 36px;
+    color: #238451;
+}
+
+.stat-card p {
+    color: #555;
+}
+
+/* UMKM */
+.umkm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.umkm-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.umkm-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* GALERI */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* KONTAK */
+.contact-section {
+    background: #edf5ef;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    background: #174c38;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 18px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid,
+    .umkm-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+}
